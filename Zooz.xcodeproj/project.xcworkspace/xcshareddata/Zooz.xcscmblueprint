@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "e3d70bce-af79-4b64-93f7-2a302464b1d8++6752",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "e3d70bce-af79-4b64-93f7-2a302464b1d8++6752" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "e3d70bce-af79-4b64-93f7-2a302464b1d8++6752" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "6FFDFCE9-75F5-46AE-B2F9-DDA7948501D7",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "e3d70bce-af79-4b64-93f7-2a302464b1d8++6752" : "ZoozEcommSDK"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Zooz",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "trunk\/Zooz.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "svn:\/\/svn.zooz.co\/TactusServer",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "e3d70bce-af79-4b64-93f7-2a302464b1d8++6752"
+    }
+  ]
+}

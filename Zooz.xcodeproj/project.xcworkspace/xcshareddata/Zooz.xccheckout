@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6FFDFCE9-75F5-46AE-B2F9-DDA7948501D7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Zooz</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>e3d70bce-af79-4b64-93f7-2a302464b1d8++6752</key>
+		<string>svn://svn.zooz.co/TactusServer/TPayIphoneApp/ZoozEcommSDK</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>trunk/Zooz.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>e3d70bce-af79-4b64-93f7-2a302464b1d8++6752</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>e3d70bce-af79-4b64-93f7-2a302464b1d8++6752</key>
+		<string>svn://svn.zooz.co/TactusServer</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>svn://svn.zooz.co/TactusServer/TPayIphoneApp/ZoozEcommSDK/trunk/Zooz.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>e3d70bce-af79-4b64-93f7-2a302464b1d8++6752</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>e3d70bce-af79-4b64-93f7-2a302464b1d8++6752</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ZoozEcommSDK</string>
+		</dict>
+	</array>
+</dict>
+</plist>
