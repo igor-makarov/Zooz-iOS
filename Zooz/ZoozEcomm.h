@@ -28,5 +28,6 @@ FOUNDATION_EXPORT const unsigned char ZoozVersionString[];
 #import "ZoozRemovePaymentMethodResponse.h"
 #import "ZoozRiskResult.h"
 #import "ZoozRisk.h"
+#import "ZoozEcommDevice.h"
 
 

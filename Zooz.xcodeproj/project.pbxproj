@@ -7,16 +7,18 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		2E70F89219D018DC00FDF027 /* ZoozUniversalLib */ = {
+		2E70F89219D018DC00FDF027 /* ZooziOSStaticFramework */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 2E70F89519D018DC00FDF027 /* Build configuration list for PBXAggregateTarget "ZoozUniversalLib" */;
+			buildConfigurationList = 2E70F89519D018DC00FDF027 /* Build configuration list for PBXAggregateTarget "ZooziOSStaticFramework" */;
 			buildPhases = (
-				2E70F89919D0BC7C00FDF027 /* Run Script */,
+				2E70F89919D0BC7C00FDF027 /* MultiPlatform Build */,
+				AB0C48341D2D2314005BC84F /* CopyFiles */,
 			);
 			dependencies = (
+				AB0C483C1D2D25D0005BC84F /* PBXTargetDependency */,
 				2EF7151519F63AF200A8F1B5 /* PBXTargetDependency */,
 			);
-			name = ZoozUniversalLib;
+			name = ZooziOSStaticFramework;
 			productName = ZoozUniversalLib;
 		};
 /* End PBXAggregateTarget section */
@@ -46,10 +48,9 @@
 		2EBB71F919C9797600474A8E /* ZoozRemovePaymentMethodResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EBB71F719C9797600474A8E /* ZoozRemovePaymentMethodResponse.m */; };
 		2EBB71FD19C9F7ED00474A8E /* ZoozRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EBB71FB19C9F7ED00474A8E /* ZoozRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2EBB71FE19C9F7ED00474A8E /* ZoozRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EBB71FC19C9F7ED00474A8E /* ZoozRequest.m */; };
-		2EBB722219CB3FBB00474A8E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EBB722119CB3FBB00474A8E /* Security.framework */; };
 		2EBB722D19CB406200474A8E /* ZooZEcommCryptoUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EBB722319CB406200474A8E /* ZooZEcommCryptoUtils.h */; };
 		2EBB722E19CB406200474A8E /* ZooZEcommCryptoUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EBB722419CB406200474A8E /* ZooZEcommCryptoUtils.m */; };
-		2EBB722F19CB406200474A8E /* ZooZEcommDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EBB722519CB406200474A8E /* ZooZEcommDevice.h */; };
+		2EBB722F19CB406200474A8E /* ZooZEcommDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EBB722519CB406200474A8E /* ZooZEcommDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2EBB723019CB406200474A8E /* ZooZEcommDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EBB722619CB406200474A8E /* ZooZEcommDevice.m */; };
 		2EBB723119CB406200474A8E /* ZooZEcommKeychainUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EBB722719CB406200474A8E /* ZooZEcommKeychainUtils.h */; };
 		2EBB723219CB406200474A8E /* ZooZEcommKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EBB722819CB406200474A8E /* ZooZEcommKeychainUtils.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -77,24 +78,6 @@
 		2EBF088B19DAE89B008CC080 /* ZoozPaymentMethodDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EBB71DC19C978A400474A8E /* ZoozPaymentMethodDetails.m */; };
 		2EBF088C19DAE89B008CC080 /* ZoozPaymentMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EAB6B0F19CE3234000F1EEA /* ZoozPaymentMethod.m */; };
 		2EBF088D19DAE89B008CC080 /* ZoozController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EBB71C819C859D300474A8E /* ZoozController.m */; };
-		2EBF088E19DAE8E3008CC080 /* ZooZEcommServerProxy.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EBB724419CBFDFD00474A8E /* ZooZEcommServerProxy.h */; };
-		2EBF088F19DAE8E3008CC080 /* ZooZEcommCryptoUtils.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EBB722319CB406200474A8E /* ZooZEcommCryptoUtils.h */; };
-		2EBF089019DAE8E3008CC080 /* ZooZEcommDevice.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EBB722519CB406200474A8E /* ZooZEcommDevice.h */; };
-		2EBF089119DAE8E3008CC080 /* ZooZEcommKeychainUtils.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EBB722719CB406200474A8E /* ZooZEcommKeychainUtils.h */; };
-		2EBF089219DAE8E3008CC080 /* ZooZEcommSecKeyWrapper.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EBB722919CB406200474A8E /* ZooZEcommSecKeyWrapper.h */; };
-		2EBF089419DAE8E3008CC080 /* ZoozServerResponse.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EBB724619CC050E00474A8E /* ZoozServerResponse.h */; };
-		2EBF089519DAE8E3008CC080 /* ZoozEcommResponseObject.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EBB71EC19C9794400474A8E /* ZoozEcommResponseObject.h */; };
-		2EBF089619DAE8E3008CC080 /* ZoozAddPaymentMethodResponse.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EBB71F119C9796200474A8E /* ZoozAddPaymentMethodResponse.h */; };
-		2EBF089719DAE8E3008CC080 /* ZoozRemovePaymentMethodResponse.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EBB71F619C9797600474A8E /* ZoozRemovePaymentMethodResponse.h */; };
-		2EBF089819DAE8E3008CC080 /* ZoozAddPaymentMethodRequest.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EBB71E119C978DD00474A8E /* ZoozAddPaymentMethodRequest.h */; };
-		2EBF089919DAE8E3008CC080 /* ZoozRemovePaymentMethodRequest.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EBB71E619C9790500474A8E /* ZoozRemovePaymentMethodRequest.h */; };
-		2EBF089A19DAE8E3008CC080 /* ZoozRequest.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EBB71FB19C9F7ED00474A8E /* ZoozRequest.h */; };
-		2EBF089B19DAE8E4008CC080 /* ZoozAddress.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EBB71D119C9787000474A8E /* ZoozAddress.h */; };
-		2EBF089C19DAE8E4008CC080 /* ZoozPhone.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EBB71D619C9788700474A8E /* ZoozPhone.h */; };
-		2EBF089D19DAE8E4008CC080 /* ZoozPaymentMethodDetails.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EBB71DB19C978A400474A8E /* ZoozPaymentMethodDetails.h */; };
-		2EBF089E19DAE8E4008CC080 /* ZoozPaymentMethod.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EAB6B0E19CE3234000F1EEA /* ZoozPaymentMethod.h */; };
-		2EBF089F19DAE8E4008CC080 /* ZoozController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EBB71C719C859D300474A8E /* ZoozController.h */; };
-		2EBF08A019DAE8E4008CC080 /* ZoozEcomm.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EBB71B319C8597200474A8E /* ZoozEcomm.h */; };
 		2EBF08A219DAEA2C008CC080 /* ZoozServerResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EBB724619CC050E00474A8E /* ZoozServerResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2EBF08A319DAEA2C008CC080 /* ZoozEcommResponseObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EBB71EC19C9794400474A8E /* ZoozEcommResponseObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2EBF08A419DAEA2C008CC080 /* ZoozAddPaymentMethodResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EBB71F119C9796200474A8E /* ZoozAddPaymentMethodResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -112,7 +95,15 @@
 		2EF7659F19DB0AF700D7B43F /* ZoozDictionaryEx.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EF7659C19DB0AF700D7B43F /* ZoozDictionaryEx.h */; };
 		2EF765A019DB0AF700D7B43F /* ZoozDictionaryEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF7659D19DB0AF700D7B43F /* ZoozDictionaryEx.m */; };
 		2EF765A119DB0AF700D7B43F /* ZoozDictionaryEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF7659D19DB0AF700D7B43F /* ZoozDictionaryEx.m */; };
-		E49A3C3D1BF9C2A5004447F8 /* Zooz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EBB71AE19C8597200474A8E /* Zooz.framework */; };
+		AB0C48351D2D2329005BC84F /* Info.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2EBB71B219C8597200474A8E /* Info.plist */; };
+		AB0C48361D2D23FE005BC84F /* ZooZEcommCryptoUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EBB722319CB406200474A8E /* ZooZEcommCryptoUtils.h */; };
+		AB0C48371D2D23FE005BC84F /* ZooZEcommDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EBB722519CB406200474A8E /* ZooZEcommDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB0C48381D2D23FE005BC84F /* ZooZEcommKeychainUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EBB722719CB406200474A8E /* ZooZEcommKeychainUtils.h */; };
+		AB0C48391D2D23FE005BC84F /* ZooZEcommSecKeyWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EBB722919CB406200474A8E /* ZooZEcommSecKeyWrapper.h */; };
+		AB0C483A1D2D23FE005BC84F /* ZooZEcommServerProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EBB724419CBFDFD00474A8E /* ZooZEcommServerProxy.h */; };
+		AB6828D61D2D17AC0055EE09 /* Zooz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EBB71AE19C8597200474A8E /* Zooz.framework */; };
+		AB6828D91D2D18400055EE09 /* ZoozRiskResult.h in Headers */ = {isa = PBXBuildFile; fileRef = E49A3C3E1BFA02FC004447F8 /* ZoozRiskResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB6828DA1D2D18400055EE09 /* ZoozRisk.h in Headers */ = {isa = PBXBuildFile; fileRef = E49A3C411BFA055D004447F8 /* ZoozRisk.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E49A3C401BFA04A1004447F8 /* ZoozRiskResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E49A3C3F1BFA04A1004447F8 /* ZoozRiskResult.m */; };
 		E49A3C431BFA09C3004447F8 /* ZoozRisk.m in Sources */ = {isa = PBXBuildFile; fileRef = E49A3C421BFA09C3004447F8 /* ZoozRisk.m */; };
 		E49A3C441BFB1AEC004447F8 /* ZoozRiskResult.h in Headers */ = {isa = PBXBuildFile; fileRef = E49A3C3E1BFA02FC004447F8 /* ZoozRiskResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -136,6 +127,13 @@
 			remoteGlobalIDString = 2EBF086819DAE833008CC080;
 			remoteInfo = ZoozEcommSDK;
 		};
+		AB0C483B1D2D25D0005BC84F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2EBB71A519C8597200474A8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2EBB71AD19C8597200474A8E;
+			remoteInfo = Zooz;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -145,24 +143,16 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				2EBF088E19DAE8E3008CC080 /* ZooZEcommServerProxy.h in CopyFiles */,
-				2EBF088F19DAE8E3008CC080 /* ZooZEcommCryptoUtils.h in CopyFiles */,
-				2EBF089019DAE8E3008CC080 /* ZooZEcommDevice.h in CopyFiles */,
-				2EBF089119DAE8E3008CC080 /* ZooZEcommKeychainUtils.h in CopyFiles */,
-				2EBF089219DAE8E3008CC080 /* ZooZEcommSecKeyWrapper.h in CopyFiles */,
-				2EBF089419DAE8E3008CC080 /* ZoozServerResponse.h in CopyFiles */,
-				2EBF089519DAE8E3008CC080 /* ZoozEcommResponseObject.h in CopyFiles */,
-				2EBF089619DAE8E3008CC080 /* ZoozAddPaymentMethodResponse.h in CopyFiles */,
-				2EBF089719DAE8E3008CC080 /* ZoozRemovePaymentMethodResponse.h in CopyFiles */,
-				2EBF089819DAE8E3008CC080 /* ZoozAddPaymentMethodRequest.h in CopyFiles */,
-				2EBF089919DAE8E3008CC080 /* ZoozRemovePaymentMethodRequest.h in CopyFiles */,
-				2EBF089A19DAE8E3008CC080 /* ZoozRequest.h in CopyFiles */,
-				2EBF089B19DAE8E4008CC080 /* ZoozAddress.h in CopyFiles */,
-				2EBF089C19DAE8E4008CC080 /* ZoozPhone.h in CopyFiles */,
-				2EBF089D19DAE8E4008CC080 /* ZoozPaymentMethodDetails.h in CopyFiles */,
-				2EBF089E19DAE8E4008CC080 /* ZoozPaymentMethod.h in CopyFiles */,
-				2EBF089F19DAE8E4008CC080 /* ZoozController.h in CopyFiles */,
-				2EBF08A019DAE8E4008CC080 /* ZoozEcomm.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB0C48341D2D2314005BC84F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Zooz.framework;
+			dstSubfolderSpec = 16;
+			files = (
+				AB0C48351D2D2329005BC84F /* Info.plist in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +187,6 @@
 		2EBB71F719C9797600474A8E /* ZoozRemovePaymentMethodResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoozRemovePaymentMethodResponse.m; sourceTree = "<group>"; };
 		2EBB71FB19C9F7ED00474A8E /* ZoozRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoozRequest.h; sourceTree = "<group>"; };
 		2EBB71FC19C9F7ED00474A8E /* ZoozRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoozRequest.m; sourceTree = "<group>"; };
-		2EBB722119CB3FBB00474A8E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		2EBB722319CB406200474A8E /* ZooZEcommCryptoUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZooZEcommCryptoUtils.h; sourceTree = "<group>"; };
 		2EBB722419CB406200474A8E /* ZooZEcommCryptoUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZooZEcommCryptoUtils.m; sourceTree = "<group>"; };
 		2EBB722519CB406200474A8E /* ZooZEcommDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZooZEcommDevice.h; sourceTree = "<group>"; };
@@ -212,9 +201,10 @@
 		2EBB724719CC050E00474A8E /* ZoozServerResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoozServerResponse.m; sourceTree = "<group>"; };
 		2EBC66DB19CECB1B00A6F840 /* ZoozTestsActionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoozTestsActionDelegate.h; sourceTree = "<group>"; };
 		2EBC66DC19CECB1B00A6F840 /* ZoozTestsActionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoozTestsActionDelegate.m; sourceTree = "<group>"; };
-		2EBF086919DAE833008CC080 /* libZoozEcommSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libZoozEcommSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EBF086919DAE833008CC080 /* libZooziOSStatic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libZooziOSStatic.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EF7659C19DB0AF700D7B43F /* ZoozDictionaryEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoozDictionaryEx.h; sourceTree = "<group>"; };
 		2EF7659D19DB0AF700D7B43F /* ZoozDictionaryEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoozDictionaryEx.m; sourceTree = "<group>"; };
+		AB6828D11D2CDF360055EE09 /* ci_scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ci_scripts; sourceTree = "<group>"; };
 		E49A3C3E1BFA02FC004447F8 /* ZoozRiskResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZoozRiskResult.h; sourceTree = "<group>"; };
 		E49A3C3F1BFA04A1004447F8 /* ZoozRiskResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoozRiskResult.m; sourceTree = "<group>"; };
 		E49A3C411BFA055D004447F8 /* ZoozRisk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZoozRisk.h; sourceTree = "<group>"; };
@@ -226,7 +216,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EBB722219CB3FBB00474A8E /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,7 +223,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E49A3C3D1BF9C2A5004447F8 /* Zooz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +230,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB6828D61D2D17AC0055EE09 /* Zooz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,11 +240,12 @@
 		2EBB71A419C8597200474A8E = {
 			isa = PBXGroup;
 			children = (
-				2EBB722119CB3FBB00474A8E /* Security.framework */,
+				AB6828D51D2CE29E0055EE09 /* Frameworks */,
 				2EBB71B019C8597200474A8E /* Zooz */,
 				2EBB71BA19C8597200474A8E /* ZoozTests */,
 				2EBF087419DAE834008CC080 /* EcommSDKTests */,
 				2EBB71AF19C8597200474A8E /* Products */,
+				AB6828D11D2CDF360055EE09 /* ci_scripts */,
 			);
 			sourceTree = "<group>";
 		};
@@ -264,7 +254,7 @@
 			children = (
 				2EBB71AE19C8597200474A8E /* Zooz.framework */,
 				2EBB71B919C8597200474A8E /* ZoozTests.xctest */,
-				2EBF086919DAE833008CC080 /* libZoozEcommSDK.a */,
+				2EBF086919DAE833008CC080 /* libZooziOSStatic.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -392,6 +382,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		AB6828D51D2CE29E0055EE09 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -404,13 +401,15 @@
 				2EBB723319CB406200474A8E /* ZooZEcommSecKeyWrapper.h in Headers */,
 				2EBB71C919C859D300474A8E /* ZoozController.h in Headers */,
 				2EBB71D819C9788700474A8E /* ZoozPhone.h in Headers */,
-				2EBB722F19CB406200474A8E /* ZooZEcommDevice.h in Headers */,
 				2EBB71EE19C9794400474A8E /* ZoozEcommResponseObject.h in Headers */,
 				2EBB71F319C9796200474A8E /* ZoozAddPaymentMethodResponse.h in Headers */,
 				2EBB722D19CB406200474A8E /* ZooZEcommCryptoUtils.h in Headers */,
+				AB6828D91D2D18400055EE09 /* ZoozRiskResult.h in Headers */,
 				2EBB71E319C978DD00474A8E /* ZoozAddPaymentMethodRequest.h in Headers */,
 				2EAB6B1019CE3234000F1EEA /* ZoozPaymentMethod.h in Headers */,
 				2EBB71F819C9797600474A8E /* ZoozRemovePaymentMethodResponse.h in Headers */,
+				AB6828DA1D2D18400055EE09 /* ZoozRisk.h in Headers */,
+				2EBB722F19CB406200474A8E /* ZooZEcommDevice.h in Headers */,
 				2EBB71B419C8597200474A8E /* ZoozEcomm.h in Headers */,
 				2EBB723119CB406200474A8E /* ZooZEcommKeychainUtils.h in Headers */,
 				2EBB71D319C9787000474A8E /* ZoozAddress.h in Headers */,
@@ -436,10 +435,15 @@
 				E49A3C441BFB1AEC004447F8 /* ZoozRiskResult.h in Headers */,
 				E49A3C451BFB1AEC004447F8 /* ZoozRisk.h in Headers */,
 				2EBF08A919DAEA2C008CC080 /* ZoozAddress.h in Headers */,
+				AB0C48371D2D23FE005BC84F /* ZooZEcommDevice.h in Headers */,
 				2EBF08AA19DAEA2C008CC080 /* ZoozPhone.h in Headers */,
 				2EBF08AB19DAEA2C008CC080 /* ZoozPaymentMethodDetails.h in Headers */,
 				2EBF08AC19DAEA2D008CC080 /* ZoozPaymentMethod.h in Headers */,
 				2EBF08AD19DAEA2D008CC080 /* ZoozController.h in Headers */,
+				AB0C48361D2D23FE005BC84F /* ZooZEcommCryptoUtils.h in Headers */,
+				AB0C48381D2D23FE005BC84F /* ZooZEcommKeychainUtils.h in Headers */,
+				AB0C48391D2D23FE005BC84F /* ZooZEcommSecKeyWrapper.h in Headers */,
+				AB0C483A1D2D23FE005BC84F /* ZooZEcommServerProxy.h in Headers */,
 				2EBF08AE19DAEA2D008CC080 /* ZoozEcomm.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,22 +487,23 @@
 			productReference = 2EBB71B919C8597200474A8E /* ZoozTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		2EBF086819DAE833008CC080 /* ZoozEcommSDK */ = {
+		2EBF086819DAE833008CC080 /* ZooziOSStatic */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2EBF087B19DAE834008CC080 /* Build configuration list for PBXNativeTarget "ZoozEcommSDK" */;
+			buildConfigurationList = 2EBF087B19DAE834008CC080 /* Build configuration list for PBXNativeTarget "ZooziOSStatic" */;
 			buildPhases = (
 				2EBF086519DAE833008CC080 /* Sources */,
-				2EBF08A119DAEA0E008CC080 /* Headers */,
 				2EBF086619DAE833008CC080 /* Frameworks */,
 				2EBF086719DAE833008CC080 /* CopyFiles */,
+				2EBF08A119DAEA0E008CC080 /* Headers */,
+				AB6828D41D2CE25D0055EE09 /* Build Framework */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ZoozEcommSDK;
+			name = ZooziOSStatic;
 			productName = EcommSDK;
-			productReference = 2EBF086919DAE833008CC080 /* libZoozEcommSDK.a */;
+			productReference = 2EBF086919DAE833008CC080 /* libZooziOSStatic.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -538,8 +543,8 @@
 			targets = (
 				2EBB71AD19C8597200474A8E /* Zooz */,
 				2EBB71B819C8597200474A8E /* ZoozTests */,
-				2E70F89219D018DC00FDF027 /* ZoozUniversalLib */,
-				2EBF086819DAE833008CC080 /* ZoozEcommSDK */,
+				2EBF086819DAE833008CC080 /* ZooziOSStatic */,
+				2E70F89219D018DC00FDF027 /* ZooziOSStaticFramework */,
 			);
 		};
 /* End PBXProject section */
@@ -562,19 +567,33 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2E70F89919D0BC7C00FDF027 /* Run Script */ = {
+		2E70F89919D0BC7C00FDF027 /* MultiPlatform Build */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Run Script";
+			name = "MultiPlatform Build";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# define output folder environment variable\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal\nTARGET_NAME=ZoozEcommSDK\n\n# Step 1. Build Device and Simulator versions\nxcodebuild -target ${TARGET_NAME} OTHER_CFLAGS=\"-fembed-bitcode\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\nxcodebuild -target ${TARGET_NAME} -configuration ${CONFIGURATION} -sdk iphonesimulator BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\n\n# make sure the output directory exists\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\n\n# Step 2. Create universal binary file using lipo\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/lib${PROJECT_NAME}.a\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/lib${TARGET_NAME}.a\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/lib${TARGET_NAME}.a\"\n\n# Last touch. copy the header files. Just for convenience\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/usr\" \"${UNIVERSAL_OUTPUTFOLDER}/\"";
+			shellScript = "set -e\n\n# If we're already inside this script then die\nif [ -n \"$RW_MULTIPLATFORM_BUILD_IN_PROGRESS\" ]; then\nexit 0\nfi\nexport RW_MULTIPLATFORM_BUILD_IN_PROGRESS=1\n\nRW_FRAMEWORK_NAME=\"ZooziOSStatic\"\nRW_INPUT_STATIC_LIB=\"libZooziOSStatic.a\"\nRW_FRAMEWORK_LOCATION=\"${BUILT_PRODUCTS_DIR}/${RW_FRAMEWORK_NAME}.framework\"\n\nfunction build_static_library {\n    # Will rebuild the static library as specified\n    #     build_static_library sdk\n    xcrun xcodebuild -project \"${PROJECT_FILE_PATH}\" \\\n    -target \"${TARGET_NAME}\" \\\n    -configuration \"${CONFIGURATION}\" \\\n    -sdk \"${1}\" \\\n    ONLY_ACTIVE_ARCH=NO \\\n    BUILD_DIR=\"${BUILD_DIR}\" \\\n    OBJROOT=\"${OBJROOT}\" \\\n    BUILD_ROOT=\"${BUILD_ROOT}\" \\\n    SYMROOT=\"${SYMROOT}\" $ACTION\n}\n\nfunction make_fat_library {\n    # Will smash 2 static libs together\n    #     make_fat_library in1 in2 out\n    xcrun lipo -create \"${1}\" \"${2}\" -output \"${3}\"\n}\n\n# 1 - Extract the platform (iphoneos/iphonesimulator) from the SDK name\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]; then\nRW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\n# 2 - Extract the version from the SDK\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]; then\nRW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\n# 3 - Determine the other platform\nif [ \"$RW_SDK_PLATFORM\" == \"iphoneos\" ]; then\nRW_OTHER_PLATFORM=iphonesimulator\nelse\nRW_OTHER_PLATFORM=iphoneos\nfi\n\n# 4 - Find the build directory\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$RW_SDK_PLATFORM$ ]]; then\nRW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${RW_OTHER_PLATFORM}\"\nelse\necho \"Could not find other platform build directory.\"\nexit 1\nfi\n\n# Build the other platform.\nbuild_static_library \"${RW_OTHER_PLATFORM}${RW_SDK_VERSION}\"\n\n# If we're currently building for iphonesimulator, then need to rebuild\n#   to ensure that we get both i386 and x86_64\nif [ \"$RW_SDK_PLATFORM\" == \"iphonesimulator\" ]; then\nbuild_static_library \"${SDK_NAME}\"\nfi\n\n# Join the 2 static libs into 1 and push into the .framework\nmake_fat_library \"${BUILT_PRODUCTS_DIR}/${RW_INPUT_STATIC_LIB}\" \\\n\"${RW_OTHER_BUILT_PRODUCTS_DIR}/${RW_INPUT_STATIC_LIB}\" \\\n\"${RW_FRAMEWORK_LOCATION}/Versions/A/${RW_FRAMEWORK_NAME}\"\n\n/usr/bin/strip -Sx \"${RW_FRAMEWORK_LOCATION}/Versions/A/${RW_FRAMEWORK_NAME}\"\n\n# Ensure that the framework is present in both platform's build directories\ncp -a \"${RW_FRAMEWORK_LOCATION}/Versions/A/${RW_FRAMEWORK_NAME}\" \\\n\"${RW_OTHER_BUILT_PRODUCTS_DIR}/${RW_FRAMEWORK_NAME}.framework/Versions/A/${RW_FRAMEWORK_NAME}\"";
+		};
+		AB6828D41D2CE25D0055EE09 /* Build Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build Framework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nexport FRAMEWORK_DIR=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework\"\n\necho $FRAMEWORK_DIR\n\n# Create the path to the real Headers directory\nmkdir -p \"${FRAMEWORK_DIR}/Versions/A/Headers\"\nmkdir -p \"${FRAMEWORK_DIR}/Versions/A/Modules\"\n\n# Create the required symlinks\nln -sfh A \"${FRAMEWORK_DIR}/Versions/Current\"\nln -sfh Versions/Current/Headers \"${FRAMEWORK_DIR}/Headers\"\nln -sfh Versions/Current/Modules \"${FRAMEWORK_DIR}/Modules\"\nln -sfh \"Versions/Current/${PRODUCT_NAME}\" \\\n\"${FRAMEWORK_DIR}/${PRODUCT_NAME}\"\n\n# Copy the public headers into the framework\n/bin/cp -a \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \\\n\"${FRAMEWORK_DIR}/Versions/A/Headers\"\n\necho \"framework module Zooz {\" \\\n\"umbrella header \\\"ZoozEcomm.h\\\"\" \\\n\"export *\" \\\n\"module * { export * }\" \\\n\"}\" > \"${FRAMEWORK_DIR}/Versions/A/Modules/module.modulemap\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -652,8 +671,13 @@
 		};
 		2EF7151519F63AF200A8F1B5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2EBF086819DAE833008CC080 /* ZoozEcommSDK */;
+			target = 2EBF086819DAE833008CC080 /* ZooziOSStatic */;
 			targetProxy = 2EF7151419F63AF200A8F1B5 /* PBXContainerItemProxy */;
+		};
+		AB0C483C1D2D25D0005BC84F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2EBB71AD19C8597200474A8E /* Zooz */;
+			targetProxy = AB0C483B1D2D25D0005BC84F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -767,46 +791,67 @@
 		2EBB71C219C8597200474A8E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7s,
+				);
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_VERSION = "";
+				GCC_WARN_SHADOW = YES;
 				INFOPLIST_FILE = Zooz/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SDKROOT)/usr/lib/system",
-				);
+				LIBRARY_SEARCH_PATHS = "";
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "zooz.com.ecomm.$(PRODUCT_NAME:rfc1034identifier)";
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zooz.zooz-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				WARNING_CFLAGS = (
+					"-Wfloat-equal",
+					"-Wundef",
+					"-Wextra",
+					"-Wall",
+				);
 			};
 			name = Debug;
 		};
 		2EBB71C319C8597200474A8E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7s,
+				);
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = NDEBUG;
+				GCC_VERSION = "";
+				GCC_WARN_SHADOW = YES;
 				INFOPLIST_FILE = Zooz/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SDKROOT)/usr/lib/system",
-				);
+				LIBRARY_SEARCH_PATHS = "";
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "zooz.com.ecomm.$(PRODUCT_NAME:rfc1034identifier)";
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zooz.zooz-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				WARNING_CFLAGS = (
+					"-Wfloat-equal",
+					"-Wundef",
+					"-Wextra",
+					"-Wall",
+				);
 			};
 			name = Release;
 		};
@@ -849,6 +894,10 @@
 		2EBF087719DAE834008CC080 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7s,
+				);
 				CLANG_MODULES_AUTOLINK = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -866,6 +915,10 @@
 		2EBF087819DAE834008CC080 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7s,
+				);
 				CLANG_MODULES_AUTOLINK = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = NO;
@@ -879,7 +932,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2E70F89519D018DC00FDF027 /* Build configuration list for PBXAggregateTarget "ZoozUniversalLib" */ = {
+		2E70F89519D018DC00FDF027 /* Build configuration list for PBXAggregateTarget "ZooziOSStaticFramework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2E70F89319D018DC00FDF027 /* Debug */,
@@ -915,7 +968,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2EBF087B19DAE834008CC080 /* Build configuration list for PBXNativeTarget "ZoozEcommSDK" */ = {
+		2EBF087B19DAE834008CC080 /* Build configuration list for PBXNativeTarget "ZooziOSStatic" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2EBF087719DAE834008CC080 /* Debug */,
