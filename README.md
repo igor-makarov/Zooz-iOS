@@ -5,7 +5,6 @@ This version now supports bitcode.
 1.  Unzip the iOS SDK zip file into any location on your drive.
 2.  Drag the Zooz.framework into your Xcode project hierarchy.
 3.  Select "add to project."  
-    Note: *Do not mark the "copy"*.
     ![](./docs/images/Zooz_Apple_iOS_SDK_version_2.png)
 4.  Add the framework to the Embedded Binaries of the target.
     ![](./docs/images/Zooz_Apple_iOS_SDK_version_3.png)
