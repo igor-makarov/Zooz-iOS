@@ -1,14 +1,17 @@
-# Zooz Apple iOS SDK – version 0.96
+# Zooz Apple iOS SDK – version 1.2
 This version now supports bitcode.
 
 ## Installing the Zooz iOS SDK Framework
-1.  Unzip the iOS SDK zip file into any location on your drive.
-2.  Drag the Zooz.framework into your Xcode project hierarchy.
-3.  Select "add to project."  
-    ![](./docs/images/Zooz_Apple_iOS_SDK_version_2.png)
-4.  Add the framework to the Embedded Binaries of the target.
-    ![](./docs/images/Zooz_Apple_iOS_SDK_version_3.png)
-5.  Add the following framework headers into the “Zooz-iOS” reference file.
+1.	Download the **Source code zip (Zooz-iOS zip)** and the **Zooz-iOS-Frameworks.zip** files from https://github.com/Zooz/Zooz-iOS/releases  
+2.	Unzip the **Zooz-iOS zip** file into any location on your drive.
+3.	Drag the **Zooz.framework** into your Xcode project hierarchy.
+4.	Select your project in "**Add to targets**", and select "**Copy..**" in the **Destination******.  
+    **Note:** *Make sure to click "Copy", when adding the framework to your project. 
+If "Copy" is not clicked, and then the downloaded SDK is moved, the app build may not work.*
+    ![](../images/Zooz_Apple_iOS_SDK_version_2.png)
+5.  Add the framework to the Embedded Binaries of the target.
+    ![](../images/Zooz_Apple_iOS_SDK_version_3.png)
+6.  Add the following framework headers into the “Zooz-iOS” reference file.
 <table>
 <colgroup>
 <col width="100%" />
@@ -123,128 +126,128 @@ Note: *The delegate methods are requested in a background thread, not on the mai
 </table>
 
 ## addPaymentMethod request
-<table>
-<thead>
-<tr>
-<th colspan="2">
-<p class="TableHeadingSmall1">Attribute Name</p>
-</th>
-<th>
-<p class="TableHeadingSmall1">Description</p>
-</th>
-<th>
-<p class="TableHeadingSmall1">Mandatory</p>
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td colspan="2">
-<p class="TableTextSmall1">paymentToken</p>
-</td>
-<td>
-<p class="TableTextSmall1">A paymentToken is a secure token representing a payment in the Zooz system. You can generate this value any of the following ways:</p>
-<ul style="list-style-type: disc;margin-left: 19pt;">
-<li style="list-style-type: disc;">The paymentToken attribute from the openPayment request.</li>
-<li style="list-style-type: disc;">The customerToken attribute from the getToken request.</li>
-</ul>
-</td>
-<td>
-<p class="TableTextSmall1">Yes</p>
-</td>
-</tr>
-<tr>
-<td colspan="2">
-<p class="TableTextSmall1">email</p>
-</td>
-<td>
-<p class="TableTextSmall1">Card holder email address.</p>
-</td>
-<td>
-<p class="TableTextSmall1">Yes</p>
-</td>
-</tr>
-<tr>
-<td colspan="2">
-<p class="TableTextSmall1">billingAddress</p>
-</td>
-<td>
-<p class="TableTextSmall1">User billing address.</p>
-</td>
-<td>
-<p class="TableTextSmall1">No</p>
-</td>
-</tr>
-<tr>
-<td colspan="2">
-<p class="TableTextSmall1">rememberPaymentMethod</p>
-</td>
-<td>
-<p class="TableTextSmall1">To save the payment method for future transactions. Default value is true.</p>
-</td>
-<td>
-<p class="TableTextSmall1">Yes</p>
-</td>
-</tr>
-<tr>
-<td rowspan="5">
-<p class="TableTextSmall1">paymentMethodDetails</p>
-</td>
-<td>
-<p class="TableTextSmall1">cardHolderName</p>
-</td>
-<td>
-<p class="TableTextSmall1">Name on credit card.</p>
-</td>
-<td>
-<p class="TableTextSmall1">Yes</p>
-</td>
-</tr>
-<tr>
-<td>
-<p class="TableTextSmall1">expirationDate</p>
-</td>
-<td>
-<p class="TableTextSmall1">Card expiration date in MM/YYYY format.</p>
-</td>
-<td>
-<p class="TableTextSmall1">Yes</p>
-</td>
-</tr>
-<tr>
-<td>
-<p class="TableTextSmall1">cvvNumber</p>
-</td>
-<td>
-<p class="TableTextSmall1">Credit card CVV number.</p>
-</td>
-<td>
-<p class="TableTextSmall1">Yes</p>
-</td>
-</tr>
-<tr>
-<td>
-<p class="TableTextSmall1">cardNumber</p>
-</td>
-<td>
-<p class="TableTextSmall1">The credit card number.</p>
-</td>
-<td>
-<p class="TableTextSmall1">Yes</p>
-</td>
-</tr>
-<tr>
-<td>
-<p class="TableTextSmall1">userIdNumber</p>
-</td>
-<td>
-<p class="TableTextSmall1">User's national ID number. Should contain 5-12 digits.</p>
-</td>
-<td>
-<p class="TableTextSmall1">No</p>
-</td>
-</tr>
-</tbody>
+<table> 
+<thead> 
+<tr> 
+<th colspan="2"> 
+<p class="TableHeadingSmall1">Attribute Name</p> 
+</th> 
+<th> 
+<p class="TableHeadingSmall1">Description</p> 
+</th> 
+<th> 
+<p class="TableHeadingSmall1">Mandatory</p> 
+</th> 
+</tr> 
+</thead> 
+<tbody> 
+<tr> 
+<td colspan="2"> 
+<p class="TableTextSmall1">paymentToken</p> 
+</td> 
+<td> 
+<p class="TableTextSmall1">A paymentToken is a secure token representing a payment in the Zooz system. You can generate this value any of the following ways:</p> 
+<ul style="list-style-type: disc;margin-left: 19pt;"> 
+<li style="list-style-type: disc;">The paymentToken attribute from the openPayment request.</li> 
+<li style="list-style-type: disc;">The customerToken attribute from the getToken request.</li> 
+</ul> 
+</td> 
+<td> 
+<p class="TableTextSmall1">Yes</p> 
+</td> 
+</tr> 
+<tr> 
+<td colspan="2"> 
+<p class="TableTextSmall1">email</p> 
+</td> 
+<td> 
+<p class="TableTextSmall1">Card holder email address.</p> 
+</td> 
+<td> 
+<p class="TableTextSmall1">Yes</p> 
+</td> 
+</tr> 
+<tr> 
+<td colspan="2"> 
+<p class="TableTextSmall1">billingAddress</p> 
+</td> 
+<td> 
+<p class="TableTextSmall1">User billing address.</p> 
+</td> 
+<td> 
+<p class="TableTextSmall1">No</p> 
+</td> 
+</tr> 
+<tr> 
+<td colspan="2"> 
+<p class="TableTextSmall1">rememberPaymentMethod</p> 
+</td> 
+<td> 
+<p class="TableTextSmall1">To save the payment method for future transactions. Default value is true.</p> 
+</td> 
+<td> 
+<p class="TableTextSmall1">Yes</p> 
+</td> 
+</tr> 
+<tr> 
+<td rowspan="5"> 
+<p class="TableTextSmall1">paymentMethodDetails</p> 
+</td> 
+<td> 
+<p class="TableTextSmall1">cardHolderName</p> 
+</td> 
+<td> 
+<p class="TableTextSmall1">Name on credit card.</p> 
+</td> 
+<td> 
+<p class="TableTextSmall1">Yes</p> 
+</td> 
+</tr> 
+<tr> 
+<td> 
+<p class="TableTextSmall1">expirationDate</p> 
+</td> 
+<td> 
+<p class="TableTextSmall1">Card expiration date in MM/YYYY format.</p> 
+</td> 
+<td> 
+<p class="TableTextSmall1">Yes</p> 
+</td> 
+</tr> 
+<tr> 
+<td> 
+<p class="TableTextSmall1">cvvNumber</p> 
+</td> 
+<td> 
+<p class="TableTextSmall1">Credit card CVV number.</p> 
+</td> 
+<td> 
+<p class="TableTextSmall1">Yes</p> 
+</td> 
+</tr> 
+<tr> 
+<td> 
+<p class="TableTextSmall1">cardNumber</p> 
+</td> 
+<td> 
+<p class="TableTextSmall1">The credit card number.</p> 
+</td> 
+<td> 
+<p class="TableTextSmall1">Yes</p> 
+</td> 
+</tr> 
+<tr> 
+<td> 
+<p class="TableTextSmall1">userIdNumber</p> 
+</td> 
+<td> 
+<p class="TableTextSmall1">User's national ID number. Should contain 5-12 digits.</p> 
+</td> 
+<td> 
+<p class="TableTextSmall1">No</p> 
+</td> 
+</tr> 
+</tbody> 
 </table>
 
 ## removePaymentMethod request
