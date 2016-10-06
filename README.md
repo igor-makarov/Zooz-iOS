@@ -8,9 +8,9 @@ This version now supports bitcode.
 4.	Select your project in "**Add to targets**", and select "**Copy..**" in the **Destination******.  
     **Note:** *Make sure to click "Copy", when adding the framework to your project. 
 If "Copy" is not clicked, and then the downloaded SDK is moved, the app build may not work.*
-    ![](../blob/docs/images/Zooz_Apple_iOS_SDK_version_2.png)
+    ![](.../docs/images/Zooz_Apple_iOS_SDK_version_2.png)
 5.  Add the framework to the Embedded Binaries of the target.
-    ![](../blob/docs/images/Zooz_Apple_iOS_SDK_version_3.png)
+    ![](.../docs/images/Zooz_Apple_iOS_SDK_version_3.png)
 6.  Add the following framework headers into the “Zooz-iOS” reference file.
 <table>
 <colgroup>
