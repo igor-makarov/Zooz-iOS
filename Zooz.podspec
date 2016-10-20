@@ -92,7 +92,7 @@ For more info go to https://github.com/Zooz/Zooz-iOS
   #
 
   s.source_files  = "Zooz/**/*.{h,m}"
-  s.exclude_files = "ZoozTests/**"
+  s.exclude_files = "ZoozTests/**", "Zooz/NSDictionary.{h,m}"
 
   # s.public_header_files = "Classes/**/*.h"
 
