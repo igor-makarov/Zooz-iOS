@@ -91,9 +91,18 @@ For more info go to https://github.com/Zooz/Zooz-iOS
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Zooz/**/*.{h,m}"
-  s.exclude_files = "ZoozTests/**", "Zooz/NSDictionary.{h,m}"
+  s.subspec 'NonARC' do |ss|
+    ss.requires_arc = false
+    ss.source_files  = "Zooz/ZooZEcommSecKeyWrapper.{h,m}", "Zooz/ZooZEcommKeychainUtils.{h,m}"
+  end
 
+  s.subspec 'Core' do |ss|
+    ss.dependency 'Zooz/NonARC'
+    ss.source_files  = "Zooz/**/*.{h,m}"
+    ss.exclude_files = "ZoozTests/**", "Zooz/NSDictionary.{h,m}", "Zooz/ZooZEcommSecKeyWrapper.{h,m}", "Zooz/ZooZEcommKeychainUtils.{h,m}", "Zooz/ZoozJsonObject.{h,m}"
+  end
+
+  s.default_subspecs = 'Core'
   # s.public_header_files = "Classes/**/*.h"
 
 
@@ -130,7 +139,7 @@ For more info go to https://github.com/Zooz/Zooz-iOS
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  s.requires_arc = false
+  # s.requires_arc = ["Zooz/ZooZEcommSecKeyWrapper.m", "Zooz/ZooZEcommKeychainUtils.m"]
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
